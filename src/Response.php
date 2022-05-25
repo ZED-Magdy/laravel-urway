@@ -6,7 +6,7 @@ class Response
 {
     /**
      * Store the response data.
-     * 
+     *
      * @var array
      */
     protected $data = [];
@@ -45,6 +45,14 @@ class Response
     public function isFailure()
     {
         return ! $this->isSuccess();
+    }
+
+    /**
+     * @return array|mixed
+     */
+    public function getData()
+    {
+        return $this->data;
     }
 
     /**
